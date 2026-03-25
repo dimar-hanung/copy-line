@@ -61,7 +61,7 @@ src/extension.ts:24:30
 
 #### 4. Natural Language Format
 ```
-在 src/extension.ts 的第 24-30 行
+lines 24-30 in src/extension.ts
 ```
 
 ## ⚙️ Configuration Options
@@ -73,7 +73,7 @@ Output format type, default: `labeled`
 - `labeled`: `File: src/file.ts (line 24-30)`
 - `compact`: `src/file.ts:24-30`
 - `code-style`: `src/file.ts:24:30`
-- `natural`: `在 src/file.ts 的第 24 行`
+- `natural`: `line 24 in src/file.ts`
 
 ### useAbsolutePath
 Whether to use absolute paths, default: `false`
@@ -128,8 +128,8 @@ File: src/api/client.ts (line 88-95)
 {
   "copy-line.outputFormat": "natural",
   "copy-line.useAbsolutePath": true,
-  "copy-line.singleLineFormat": "第 ${line} 行",
-  "copy-line.multiLineFormat": "第 ${start} 到 ${end} 行",
+  "copy-line.singleLineFormat": "line ${line}",
+  "copy-line.multiLineFormat": "line ${start}-${end}",
   "copy-line.showStatusMessage": false
 }
 ```
@@ -139,7 +139,7 @@ File: src/api/client.ts (line 88-95)
 If the default keyboard shortcut conflicts, you can customize it in VS Code:
 
 1. Open `File > Preferences > Keyboard Shortcuts`
-2. Search for "复制选中文件与行号"
+2. Search for "Copy Selected File and Line Numbers"
 3. Click to edit and set a new keyboard shortcut
 
 ## 🤝 Contributing

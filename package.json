@@ -2,7 +2,7 @@
   "name": "copy-line",
   "displayName": "Copy Line",
   "publisher": "qinhaoyu",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Copy file path and line numbers to clipboard. Perfect for collaborating with AI assistants to locate code.",
   "engines": {
     "vscode": "^1.104.0"
@@ -18,9 +18,9 @@
     "assistant",
     "reference",
     "path",
-    "行号",
-    "文件名",
-    "AI助手"
+    "line numbers",
+    "file name",
+    "AI assistant"
   ],
   "license": "MIT",
   "main": "./out/extension.js",
@@ -40,7 +40,7 @@
     "commands": [
       {
         "command": "copy-line.copySelectionReference",
-        "title": "复制选中文件与行号",
+        "title": "Copy Selected File and Line Numbers",
         "icon": "$(go-to-file)"
       }
     ],
@@ -81,27 +81,27 @@
             "natural"
           ],
           "default": "labeled",
-          "description": "输出格式：labeled(如: File: src/file.ts (line 24-30)), compact(如: src/file.ts:24-30), code-style(如: src/file.ts:24:30), natural(如: 在 src/file.ts 的第 24 行)"
+          "description": "Output format: labeled (e.g., File: src/file.ts (line 24-30)), compact (e.g., src/file.ts:24-30), code-style (e.g., src/file.ts:24:30), natural (e.g., line 24 in src/file.ts)"
         },
         "copy-line.useAbsolutePath": {
           "type": "boolean",
           "default": false,
-          "description": "使用绝对路径而非相对路径"
+          "description": "Use absolute paths instead of relative paths"
         },
         "copy-line.showStatusMessage": {
           "type": "boolean",
           "default": true,
-          "description": "复制后显示状态栏提示消息"
+          "description": "Show status bar message after copying"
         },
         "copy-line.singleLineFormat": {
           "type": "string",
           "default": "line ${line}",
-          "description": "单行选择时的格式"
+          "description": "Format for single line selection"
         },
         "copy-line.multiLineFormat": {
           "type": "string",
           "default": "line ${start}-${end}",
-          "description": "多行选择时的格式"
+          "description": "Format for multi-line selection"
         }
       }
     }

@@ -52,8 +52,8 @@ function formatSelection(sel: vscode.Selection, useAbsolutePath: boolean, output
     case 'code-style':
       return `${filePath}:${start}${start !== end ? ':' + end : ''}`
     case 'natural':
-      const rangeText = start === end ? `第 ${start} 行` : `第 ${start}-${end} 行`
-      return `在 ${filePath} 的${rangeText}`
+      const rangeText = start === end ? `line ${start}` : `lines ${start}-${end}`
+      return `${rangeText} in ${filePath}`
     default:
       return `File: ${filePath} (${lineRangeText})`
   }
@@ -76,7 +76,7 @@ export function activate(context: vscode.ExtensionContext) {
     await vscode.env.clipboard.writeText(text)
 
     if (showStatusMessage) {
-      vscode.window.setStatusBarMessage(`已复制: ${text}`, 2000)
+      vscode.window.setStatusBarMessage(`Copied: ${text}`, 2000)
     }
   })
   context.subscriptions.push(disposable)
