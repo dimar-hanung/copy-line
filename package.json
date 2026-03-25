@@ -2,7 +2,7 @@
   "name": "copy-line",
   "displayName": "Copy Line",
   "publisher": "qinhaoyu",
-  "version": "0.0.6",
+  "version": "0.7.0",
   "description": "Copy file path and line numbers to clipboard. Perfect for collaborating with AI assistants to locate code.",
   "engines": {
     "vscode": "^1.104.0"
