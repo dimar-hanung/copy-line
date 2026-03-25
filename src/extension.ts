@@ -13,7 +13,9 @@ function toFilePath(doc: vscode.TextDocument, useAbsolutePath: boolean): string 
     const root = f.uri.fsPath
     if (filePath === root || filePath.startsWith(root + path.sep)) {
       const rel = path.relative(root, filePath)
-      return rel.split(path.sep).join('/')
+      const rootName = path.basename(root)
+      const relPath = rel.split(path.sep).join('/')
+      return `@${rootName}/${relPath}`
     }
   }
   return path.basename(filePath)
